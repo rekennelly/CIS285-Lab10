@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="4" failures="4" name="testSelectionSort" time="0.014" errors="0" skipped="0">
+<testsuite tests="4" failures="2" name="testSelectionSort" time="0.012" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
     <property name="java.vm.version" value="15.0.1+9-18"/>
@@ -59,28 +59,10 @@
     <property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
   </properties>
-  <testcase classname="testSelectionSort" name="testSelectionSort.testPositive" time="0.013">
-    <failure message="expected: &lt;7&gt; but was: &lt;2&gt;" type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: expected: &lt;7&gt; but was: &lt;2&gt;
-	at org.junit.jupiter.api.AssertionUtils.fail(AssertionUtils.java:55)
-	at org.junit.jupiter.api.AssertionUtils.failNotEqual(AssertionUtils.java:62)
-	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:150)
-	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:145)
-	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:510)
-	at testSelectionSort.testPositive(testSelectionSort.java:51)
-</failure>
-  </testcase>
-  <testcase classname="testSelectionSort" name="testSelectionSort.testNegative" time="0">
-    <failure message="expected: &lt;-8&gt; but was: &lt;-9&gt;" type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: expected: &lt;-8&gt; but was: &lt;-9&gt;
-	at org.junit.jupiter.api.AssertionUtils.fail(AssertionUtils.java:55)
-	at org.junit.jupiter.api.AssertionUtils.failNotEqual(AssertionUtils.java:62)
-	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:150)
-	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:145)
-	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:510)
-	at testSelectionSort.testNegative(testSelectionSort.java:79)
-</failure>
-  </testcase>
-  <testcase classname="testSelectionSort" name="testSelectionSort.testMixed" time="0">
-    <failure message="expected: &lt;-6&gt; but was: &lt;-42&gt;" type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: expected: &lt;-6&gt; but was: &lt;-42&gt;
+  <testcase classname="testSelectionSort" name="testSelectionSort.testPositive" time="0.001"/>
+  <testcase classname="testSelectionSort" name="testSelectionSort.testNegative" time="0"/>
+  <testcase classname="testSelectionSort" name="testSelectionSort.testMixed" time="0.011">
+    <failure message="expected: &lt;-6&gt; but was: &lt;8&gt;" type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: expected: &lt;-6&gt; but was: &lt;8&gt;
 	at org.junit.jupiter.api.AssertionUtils.fail(AssertionUtils.java:55)
 	at org.junit.jupiter.api.AssertionUtils.failNotEqual(AssertionUtils.java:62)
 	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:150)
@@ -89,8 +71,8 @@
 	at testSelectionSort.testMixed(testSelectionSort.java:102)
 </failure>
   </testcase>
-  <testcase classname="testSelectionSort" name="testSelectionSort.testDuplicates" time="0.001">
-    <failure message="expected: &lt;33&gt; but was: &lt;22&gt;" type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: expected: &lt;33&gt; but was: &lt;22&gt;
+  <testcase classname="testSelectionSort" name="testSelectionSort.testDuplicates" time="0">
+    <failure message="expected: &lt;33&gt; but was: &lt;44&gt;" type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: expected: &lt;33&gt; but was: &lt;44&gt;
 	at org.junit.jupiter.api.AssertionUtils.fail(AssertionUtils.java:55)
 	at org.junit.jupiter.api.AssertionUtils.failNotEqual(AssertionUtils.java:62)
 	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:150)
