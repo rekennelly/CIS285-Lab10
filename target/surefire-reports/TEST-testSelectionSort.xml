@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="4" failures="2" name="testSelectionSort" time="0.012" errors="0" skipped="0">
+<testsuite tests="4" failures="2" name="testSelectionSort" time="0.043" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
     <property name="java.vm.version" value="15.0.1+9-18"/>
@@ -59,20 +59,34 @@
     <property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
   </properties>
-  <testcase classname="testSelectionSort" name="testSelectionSort.testPositive" time="0.001"/>
-  <testcase classname="testSelectionSort" name="testSelectionSort.testNegative" time="0"/>
-  <testcase classname="testSelectionSort" name="testSelectionSort.testMixed" time="0.011">
-    <failure message="expected: &lt;-6&gt; but was: &lt;8&gt;" type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: expected: &lt;-6&gt; but was: &lt;8&gt;
+  <testcase classname="testSelectionSort" name="testSelectionSort.testPositive" time="0.029"/>
+  <testcase classname="testSelectionSort" name="testSelectionSort.testNegative" time="0.001"/>
+  <testcase classname="testSelectionSort" name="testSelectionSort.testMixed" time="0.012">
+    <failure message="expected: &lt;-42&gt; but was: &lt;-6&gt;" type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: expected: &lt;-42&gt; but was: &lt;-6&gt;
 	at org.junit.jupiter.api.AssertionUtils.fail(AssertionUtils.java:55)
-	at org.junit.jupiter.api.AssertionUtils.failNotEqual(AssertionUtils.java:62)
-	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:150)
-	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:145)
-	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:510)
+	at org.junit.jupiter.api.AssertSame.failNotSame(AssertSame.java:48)
+	at org.junit.jupiter.api.AssertSame.assertSame(AssertSame.java:37)
+	at org.junit.jupiter.api.AssertSame.assertSame(AssertSame.java:32)
+	at org.junit.jupiter.api.Assertions.assertSame(Assertions.java:2779)
 	at testSelectionSort.testMixed(testSelectionSort.java:102)
 </failure>
+    <system-out>-42 is now at index 0. 34 is now at index 2
+-6 is now at index 0. -42 is now at index 3
+34 is now at index 1. 35 is now at index 2
+-42 is now at index 1. 34 is now at index 3
+-8 is now at index 1. -42 is now at index 4
+34 is now at index 2. 35 is now at index 3
+-42 is now at index 2. 34 is now at index 4
+34 is now at index 3. 35 is now at index 4
+-6
+-8
+-42
+34
+35
+</system-out>
   </testcase>
-  <testcase classname="testSelectionSort" name="testSelectionSort.testDuplicates" time="0">
-    <failure message="expected: &lt;33&gt; but was: &lt;44&gt;" type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: expected: &lt;33&gt; but was: &lt;44&gt;
+  <testcase classname="testSelectionSort" name="testSelectionSort.testDuplicates" time="0.001">
+    <failure message="expected: &lt;22&gt; but was: &lt;33&gt;" type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: expected: &lt;22&gt; but was: &lt;33&gt;
 	at org.junit.jupiter.api.AssertionUtils.fail(AssertionUtils.java:55)
 	at org.junit.jupiter.api.AssertionUtils.failNotEqual(AssertionUtils.java:62)
 	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:150)
@@ -80,5 +94,21 @@
 	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:510)
 	at testSelectionSort.testDuplicates(testSelectionSort.java:150)
 </failure>
+    <system-out>22 is now at index 0. 33 is now at index 1
+22 is now at index 0. 22 is now at index 3
+22 is now at index 1. 33 is now at index 3
+33 is now at index 1. 22 is now at index 4
+33 is now at index 2. 88 is now at index 3
+22 is now at index 2. 33 is now at index 4
+33 is now at index 3. 88 is now at index 4
+44 is now at index 3. 33 is now at index 5
+33 is now at index 4. 88 is now at index 5
+22
+33
+22
+44
+33
+88
+</system-out>
   </testcase>
 </testsuite>

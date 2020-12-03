@@ -29,15 +29,19 @@ public class SelectionSort {
          for (int i = 0; i < n - 1; i++) {
              int minIndex = i;
              for (int j= i+1; j < n; j++) {
-                 if (x[minIndex] > x[j]) {
-                     minIndex = j;
-                 }
+                 if (x[minIndex] >=  x[j]) {
+                     minIndex = j;                     
 
-                 int temp = x[minIndex];
-                 x[minIndex] = x[i];
-                 x[i] = temp;
+                    int temp = x[minIndex];
+                    x[minIndex] = x[i];
+                    x[i] = temp;
+                 }
              } // end of inner for loop
          } // end of outer for loop
+         
+         for (int i = 0; i < n; i++) {
+             System.out.println(x[i]);
+         }
          return x;
      } // end of basicSelectionSort method
 }

@@ -1,18 +1,18 @@
 -------------------------------------------------------------------------------
 Test set: testSelectionSort
 -------------------------------------------------------------------------------
-Tests run: 4, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 0.014 sec <<< FAILURE!
-testSelectionSort.testMixed()  Time elapsed: 0.011 sec  <<< FAILURE!
-org.opentest4j.AssertionFailedError: expected: <-6> but was: <8>
+Tests run: 4, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 0.043 sec <<< FAILURE!
+testSelectionSort.testMixed()  Time elapsed: 0.012 sec  <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <-42> but was: <-6>
 	at org.junit.jupiter.api.AssertionUtils.fail(AssertionUtils.java:55)
-	at org.junit.jupiter.api.AssertionUtils.failNotEqual(AssertionUtils.java:62)
-	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:150)
-	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:145)
-	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:510)
+	at org.junit.jupiter.api.AssertSame.failNotSame(AssertSame.java:48)
+	at org.junit.jupiter.api.AssertSame.assertSame(AssertSame.java:37)
+	at org.junit.jupiter.api.AssertSame.assertSame(AssertSame.java:32)
+	at org.junit.jupiter.api.Assertions.assertSame(Assertions.java:2779)
 	at testSelectionSort.testMixed(testSelectionSort.java:102)
 
-testSelectionSort.testDuplicates()  Time elapsed: 0 sec  <<< FAILURE!
-org.opentest4j.AssertionFailedError: expected: <33> but was: <44>
+testSelectionSort.testDuplicates()  Time elapsed: 0.001 sec  <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <22> but was: <33>
 	at org.junit.jupiter.api.AssertionUtils.fail(AssertionUtils.java:55)
 	at org.junit.jupiter.api.AssertionUtils.failNotEqual(AssertionUtils.java:62)
 	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:150)
