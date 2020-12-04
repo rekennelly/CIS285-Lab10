@@ -22,26 +22,42 @@ public class SelectionSort {
      * inputs:
      * outputs:
      * special conditions:
-     */
+ */
      public int[] basicSelectionSort(int[] x) {
          int n = x.length;
-
-         for (int i = 0; i < n - 1; i++) {
-             int minIndex = i;
-             for (int j= i+1; j < n; j++) {
-                 if (x[minIndex] >=  x[j]) {
-                     minIndex = j;                     
-
-                    int temp = x[minIndex];
-                    x[minIndex] = x[i];
-                    x[i] = temp;
+         for (int start = 0; start < n - 1; start++) {
+             int min = x[start];
+             int minIndex = start;
+             
+             for (int j = start + 1; j < n; j++) {
+                 if (x[j] < min) {
+                     min = x[j];
+                     minIndex = j;
                  }
              } // end of inner for loop
+             
+             int temp = min;
+             x[minIndex] = x[start];
+             x[start] = temp;
          } // end of outer for loop
-         
-         for (int i = 0; i < n; i++) {
-             System.out.println(x[i]);
-         }
          return x;
      } // end of basicSelectionSort method
+     
+    public static void main(String[] args) {
+       int[] positiveArr = new int[6];
+       positiveArr[0] = 3;
+       positiveArr[1] = 2;
+       positiveArr[2] = 8;
+       positiveArr[3] = 2;
+       positiveArr[4] = 3;
+       positiveArr[5] = 4;
+
+       
+       SelectionSort positiveTester = new SelectionSort();
+       int[] selectionSortedPositives = positiveTester.basicSelectionSort(positiveArr);
+       
+       for (int i = 0; i > 6; i++) {
+           System.out.print(selectionSortedPositives[i] + " ");
+       }
+    } //end main
 }

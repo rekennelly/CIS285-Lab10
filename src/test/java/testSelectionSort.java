@@ -47,10 +47,7 @@ public class testSelectionSort {
         SelectionSort tester = new SelectionSort();
         int[] selectionSortedArr = tester.basicSelectionSort(arr);
 
-        for (int i = 0; i < 5; i++) {
-            assertEquals(Sortedarr[i], selectionSortedArr[i]);
-        }
-
+        assertArrayEquals(selectionSortedArr,Sortedarr);
     }
 
     public void testNegative(){
@@ -75,9 +72,7 @@ public class testSelectionSort {
         SelectionSort tester2 = new SelectionSort();
         int[] selectionSortedArr2 = tester2.basicSelectionSort(arr2);
 
-        for (int i = 0; i < 7; i++) {
-            assertEquals(sortedArr2[i], selectionSortedArr2[i]);
-        }
+        assertArrayEquals(selectionSortedArr2,sortedArr2);
      }
 
     public void testMixed(){
@@ -98,9 +93,7 @@ public class testSelectionSort {
         SelectionSort tester = new SelectionSort();
         int[] selectionSortedArr = tester.basicSelectionSort(arr);
 
-        for (int i = 0; i < 5; i++) {
-            assertSame(sortedArr[i], selectionSortedArr[i]);
-        }
+        assertArrayEquals(selectionSortedArr,sortedArr);
 
         int[] arr2 = new int[6];
         arr2[0] = -4;
@@ -121,34 +114,30 @@ public class testSelectionSort {
         SelectionSort tester2 = new SelectionSort();
         int[] selectionSortedArr2 = tester2.basicSelectionSort(arr2);
 
-        for (int i = 0; i < 6; i++) {
-            assertEquals(sortedArr2[i], selectionSortedArr2[i]);
-        }
+        assertArrayEquals(selectionSortedArr2,sortedArr2);
     }
 
     public void testDuplicates(){
        int[] positiveArr = new int[6];
-       positiveArr[0] = 33;
-       positiveArr[1] = 22;
-       positiveArr[2] = 88;
-       positiveArr[3] = 22;
-       positiveArr[4] = 33;
-       positiveArr[5] = 44;
+       positiveArr[0] = 3;
+       positiveArr[1] = 2;
+       positiveArr[2] = 8;
+       positiveArr[3] = 2;
+       positiveArr[4] = 3;
+       positiveArr[5] = 4;
 
        int[] sortedPositiveArr = new int[6];
-       sortedPositiveArr[0] = 22;
-       sortedPositiveArr[1] = 22;
-       sortedPositiveArr[2] = 33;
-       sortedPositiveArr[3] = 33;
-       sortedPositiveArr[4] = 44;
-       sortedPositiveArr[5] = 88;
+       sortedPositiveArr[0] = 2;
+       sortedPositiveArr[1] = 2;
+       sortedPositiveArr[2] = 3;
+       sortedPositiveArr[3] = 3;
+       sortedPositiveArr[4] = 4;
+       sortedPositiveArr[5] = 8;
 
        SelectionSort positiveTester = new SelectionSort();
        int[] selectionSortedPositives = positiveTester.basicSelectionSort(positiveArr);
 
-       for (int i = 0; i < 6; i++) {
-           assertEquals(sortedPositiveArr[i], selectionSortedPositives[i]);
-       }
+       assertArrayEquals(selectionSortedPositives,sortedPositiveArr);
 
        int[] negativeArr = new int[6];
        negativeArr[0] = -16;
@@ -169,9 +158,6 @@ public class testSelectionSort {
        SelectionSort negativeTester = new SelectionSort();
        int[] selectionSortedNegatives = negativeTester.basicSelectionSort(negativeArr);
 
-       for (int i = 0; i < 6; i++) {
-           assertEquals(sortedNegativeArr[i], selectionSortedNegatives[i]);
-       }
+       assertArrayEquals(selectionSortedNegatives,sortedNegativeArr);
     }
-
 }
